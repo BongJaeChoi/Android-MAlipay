@@ -8,7 +8,6 @@ import android.content.Context;
 
 public class AliConfig {
     //비즈니스 PID 유니크한 알리페이 유저넘버
-    public static final String PARTNER = "2088421322042198";
     // 판매자 미수금
     public static final String SELLER = "charis@madsq.net";
 
@@ -26,10 +25,10 @@ public class AliConfig {
     public static final String PAYMENT_TYPE = "1";
     public static final String EXPRESS_GATEWAY = "expressGateway";
 
-    public static String getPartnerID(Context context) {
+    static String getPartnerID(Context context) {
         return context.getString(R.string.partner_id);
     }
-    public static String getRsaPrivateKey(Context context){
+    static String getRsaPrivateKey(Context context){
         return context.getString(R.string.rsa_key);
     }
 }
