@@ -52,7 +52,7 @@ public class AliUtil {
         String orderInfo = "partner=" + "\"" + AliConfig.getPartnerID(activity) + "\"";
 
         // 签约卖家支付宝账号
-        orderInfo += "&seller_id=" + "\"" + AliConfig.SELLER + "\"";
+        orderInfo += "&seller_id=" + "\"" + AliConfig.getSeller(activity) + "\"";
 
         // 商户网站唯一订单号
         orderInfo += "&out_trade_no=" + "\"" + getOutTradeNo() + "\"";
