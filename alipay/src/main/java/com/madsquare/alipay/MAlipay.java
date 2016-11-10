@@ -63,7 +63,7 @@ public class MAlipay {
      * @param price         총 가격 - A floating number ranging 0.01～1000000.00, specify the foreign price of the items If use the total_fee, don’t use the rmb_fee
      */
     public void pay(String productName, String productDetail, String price) {
-        String orderInfo = AliUtil.getOrderInfo(productName, productDetail, price);
+        String orderInfo = AliUtil.getOrderInfo(productName, productDetail, price,mActivity);
         String sign = sign(orderInfo);
         Log.e(TAG, "pay: orderinfo : "+orderInfo );
         Log.e(TAG, "pay: sign sign : "+sign );

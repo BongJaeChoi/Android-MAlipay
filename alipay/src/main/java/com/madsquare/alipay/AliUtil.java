@@ -1,6 +1,7 @@
 package com.madsquare.alipay;
 
 
+import android.app.Activity;
 import android.util.Log;
 
 import java.security.KeyFactory;
@@ -45,10 +46,10 @@ public class AliUtil {
      * @param price         총 가격 - A floating number ranging 0.01～1000000.00, specify the foreign price of the items If use the total_fee, don’t use the rmb_fee
      * @return
      */
-    public static String getOrderInfo(String productName, String productDetail, String price) {
+    public static String getOrderInfo(String productName, String productDetail, String price, Activity activity) {
 
         // 签约合作者身份ID
-        String orderInfo = "partner=" + "\"" + AliConfig.PARTNER + "\"";
+        String orderInfo = "partner=" + "\"" + AliConfig.getPartnerID(activity) + "\"";
 
         // 签约卖家支付宝账号
         orderInfo += "&seller_id=" + "\"" + AliConfig.SELLER + "\"";
