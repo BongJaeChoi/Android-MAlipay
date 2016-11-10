@@ -1,0 +1,2 @@
+include ':app', ':alipay'
+project(":alipay").projectDir  = new File('/Users/choebongjae/Documents/Android_Library/aliPay')
